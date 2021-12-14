@@ -10,7 +10,7 @@ function PromiseExmaple(){
     });
     function runPromist(){
         Promise.all([p1, p2]).then(function (results) {
-            console.log(results); // 获得一个Array: ['P1', 'P2']
+            console.log(results);
             setResult(results);
         });
     }
@@ -24,9 +24,10 @@ function PromiseExmaple(){
 
     return(
         <div><br />
+        <h2>Promise 1</h2>
             <button onClick={runPromist}>Run All</button><br />
             <button onClick={racePromist}>Race</button>
-            <p>{result}</p>
+            <h4>{result}</h4>
         </div>
     )
 }
